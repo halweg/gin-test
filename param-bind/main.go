@@ -22,6 +22,7 @@ func testing(c *gin.Context)  {
 
     if err := c.ShouldBind(&person); err != nil {
         c.String(http.StatusOK, "%s", err.Error())
+        return
     }
 
     c.String(http.StatusOK, "%v", person)
