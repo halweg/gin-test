@@ -12,7 +12,6 @@ func main() {
     r.Static("/assets", "./assets")
     r.StaticFS("/static", http.Dir("static"))
     r.StaticFile("/favicon.ico", "./favicon.ico")
-    r.Static("/assets", "./assets")
 
     r.GET("/ping", func(context *gin.Context) {
         context.JSON(http.StatusOK, gin.H{"message": "hello world"})
