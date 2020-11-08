@@ -12,6 +12,8 @@ type DateRequest struct {
     StartDate time.Time `form:"start_date" binding:"required,DateRight" time_format:"2006-01-02"`
 
     EndDate time.Time `form:"end_date" binding:"required,gtfield=StartDate" time_format:"2006-01-02"`
+
+    Tag string "hello"
 }
 
 func DateRight(l validator.FieldLevel) bool {
